@@ -1,0 +1,150 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #1a1a1a;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.container {
+    width: 80vw; /* Use vw for width to be responsive */
+    margin: auto;
+    position: relative;
+}
+
+header {
+    background: linear-gradient(90deg, #333, #4f4f4f);
+    color: #fff;
+    padding: 2vh 0; /* Use vh for vertical padding */
+    border-bottom: #c59c6e 0.3vh solid;
+    position: relative;
+    animation: slideDown 1s ease-out;
+}
+
+header h1 {
+    font-family: 'Georgia', serif;
+    font-size: 3.8vw; /* Use vw for font size */
+    text-align: center;
+    font-weight: bold;
+    animation: popIn 1.5s ease-in-out;
+}
+
+.logo-placeholder img {
+    width: 25vw;
+    height: 25vw; /* Keep aspect ratio by using vw */
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.5);
+}
+
+/* Language switch button */
+.language-switch button {
+    padding: 1vh 1.5vw; /* Use vh and vw for padding */
+}
+
+nav {
+    padding: 1.5vh 0;
+}
+
+nav ul li {
+    margin-right: 3vw; /* Use vw for margin */
+}
+
+nav ul li a {
+    font-size: 1.8vw; /* Use vw for font size */
+}
+
+h2 {
+    font-size: 3vw; /* Use vw for section titles */
+}
+
+#about-text {
+    font-size: 1.8vw; /* Use vw for text */
+    max-width: 80vw; /* Set max-width to be responsive */
+}
+
+.lawyer-card {
+    padding: 3vh 2vw; /* Use vh and vw for padding */
+}
+
+.lawyer-photo {
+    width: 15vw;
+    height: 15vw; /* Responsive sizing */
+}
+
+.contact-btn {
+    padding: 1vh 2vw; /* Use vh and vw for padding */
+    margin-left: 2vw;
+}
+
+.modal-content {
+    width: 40vw; /* Modal width is now responsive */
+    padding: 2vh 2vw;
+}
+
+.service {
+    padding: 2vh 1.5vw;
+    margin: 1vh;
+}
+
+.service img {
+    width: 10vw; /* Use vw for image size */
+    height: 10vw;
+}
+
+#consultation {
+    padding: 4vh;
+    margin-top: 4vh;
+}
+
+#consultation-form input, #consultation-form textarea {
+    padding: 1vh;
+    margin-bottom: 2vh;
+}
+
+#consultation-form button {
+    padding: 1vh 2vw;
+}
+
+footer {
+    padding: 2vh 0;
+    font-size: 1.6vw;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideDown {
+    0% { transform: translateY(-10vh); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(10vh); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes popIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(5vh); }
+    100% { opacity: 1; transform: translateY(0); }
+}

@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('contact-title').innerHTML = 'اتصل بنا';
             document.getElementById('location-title').innerHTML = 'عنواننا';
             document.getElementById('contact-info').innerHTML =
-                'البريد الإلكتروني: info@mee-lawfirm.com | الهاتف:‎ +20 1063606886';
+                'البريد الإلكتروني: info@mee-lawfirm.com | الهاتف:‎ +20 1234 567 890';
             document.getElementById('follow-us').innerHTML =
                 'تابعنا على: <a href="https://wa.me/message/C4DG267ASJ5HB1">واتساب</a> | ' +
                 '<a href="https://www.facebook.com/mohamedezzelrega?mibextid=JRoKGi">فيسبوك</a> | ' +
@@ -146,6 +146,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 modalTitle.innerHTML = 'تواصل مع محمد عز الرجال';
                 modalEmail.innerHTML = 'البريد الإلكتروني: <a href="mailto:mezzalregal@lawfirm.com">mezzalregal@lawfirm.com</a>';
+                modalPhone.innerHTML = 'الهاتف: <a href="tel:+20123456789"> ‎ +20 1234 567 890</a>';
+    
+        } else {
+            // Switch to English
             document.title = 'MEE Law Firm - Legal Services';
             document.getElementById('title').innerHTML = 'MEE Law Firm';
 
@@ -176,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Modal Content Translation
             document.querySelector('.modal-content h3').innerHTML = 'Contact Mohamed EzzAlRegal';
-            document.querySelector('.modal-content p').innerHTML = 'Email: <a href="mailto:mezzalregal@lawfirm.com">mezzalregal@lawfirm.com</a><br> Phone: <a href="tel:+20123456789">+20 1063606886</a>';
+            document.querySelector('.modal-content p').innerHTML = 'Email: <a href="mailto:mezzalregal@lawfirm.com">mezzalregal@lawfirm.com</a><br> Phone: <a href="tel:+20123456789">+20 123 456 789</a>';
 
             // Services Section
             document.getElementById('services').querySelector('h2').innerHTML = 'Services We Provide';
@@ -220,21 +224,21 @@ document.addEventListener('DOMContentLoaded', function () {
                 updateServiceModalText('service-tax', 'Tax Appeals', 'Tax Appeals', 'Our tax appeal department drafts memos and secures the best outcomes for tax appeals.');
                 updateServiceModalText('service-social', 'Social Services', 'Social Services', 'We contribute to community initiatives that protect human rights.');
                 updateServiceModalText('service-Felonies', 'Felonies Services', 'Felonies Services', 'The defendant is innocent until proven guilty... Therefore, we honorably defend justice and the enforcement of the law, ensuring individuals peace of mind before the state.');
-                updateServiceModalText('service-admin', ' Administrative Law',' Administrative Law', 'We handle administrative law cases at all levels in the State Council courts, whether they relate to public employees, government institutions, decisions, regulations, or contracts.');
+                updateServiceModalText('service-admin', ' Administrative Law', 'We handle administrative law cases at all levels in the State Council courts, whether they relate to public employees, government institutions, decisions, regulations, or contracts.');
                 updateServiceModalText('service-labor', 'Labor Law', 'Labor Law', 'The rights of workers are essential for their continued employment. We ensure that workers, often the weaker party, are protected against powerful corporations and economic forces.');
 
                 // Contact Us Section.
             document.getElementById('clients-title').innerHTML = 'Our Clients';
             document.getElementById('contact-title').innerHTML = 'Contact Us';
             document.getElementById('location-title').innerHTML = 'Our Location';
-            document.getElementById('contact-info').innerHTML = 'Email: info@mee-lawfirm.com | Phone:+20 1063606886';
+            document.getElementById('contact-info').innerHTML = 'Email: info@mee-lawfirm.com | Phone: +20 1234 567 890';
             document.getElementById('follow-us').innerHTML = 'Follow us: <a href="https://wa.me/message/C4DG267ASJ5HB1">WhatsApp</a> | <a href="https://www.facebook.com/mohamedezzelrega?mibextid=JRoKGi">Facebook</a> | <a href="https://t.me/+201063606886">Telegram</a>';
 
             // Footer Section
             document.querySelector('footer p').innerHTML = '&copy; 2024 MEE Law Firm. All rights reserved.';
             modalTitle.innerHTML = 'Contact Mohamed EzzElRegal';
             modalEmail.innerHTML = 'Email: <a href="mailto:mezzalregal@lawfirm.com">mezzalregal@lawfirm.com</a>';
-            modalPhone.innerHTML = 'Phone: <a href="tel:+201063606886">+20 1063606886</a>';
+            modalPhone.innerHTML = 'Phone: <a href="tel:+20123456789">+20 123 456 789</a>';
 
         }
 

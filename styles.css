@@ -183,7 +183,8 @@ h2 {
     width: 50%; /* Adjust width for different screen sizes */
     max-width: 600px; /* Limit max width */
     animation: fadeInUp 2s ease-out; /* Fade-in effect */
-    margin-left: 200px;
+    margin-left: 300px; /* Remove left margin */
+    margin-right: 0; 
 }
 body[dir="rtl"] .lawyer-card {
     margin-left: 0; /* Remove left margin */
@@ -291,6 +292,8 @@ body[dir="rtl"] .lawyer-details {
     cursor: pointer;
 }
 
+/* Clients Logos Container */
+/* Clients Logos Scrolling */
 
 .clients-logos {
     display: flex;
@@ -304,7 +307,11 @@ body[dir="rtl"] .lawyer-details {
     display: flex;
     justify-content: space-between;
     gap: 30px;
-    animation: scroll 30s linear infinite; /* Slower animation for infinite scrolling */
+    animation: scrollLTR 30s linear infinite; /* Default LTR animation */
+}
+
+body[dir="rtl"] .logo-slide {
+    animation: scrollRTL 30s linear infinite; /* RTL animation */
 }
 
 .logo-slide img {
@@ -323,20 +330,22 @@ body[dir="rtl"] .lawyer-details {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
 }
 
-@keyframes scroll {
+/* Define keyframes for LTR and RTL scroll */
+@keyframes scrollLTR {
     0% {
-        transform: translateX(0); /* Start position */
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%); /* Scroll the entire row by half */
+        transform: translateX(-50%); /* Scroll to the left */
     }
 }
 
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    .logo-slide img {
-        width: 100px;
-        height: 100px;
+@keyframes scrollRTL {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(50%); /* Scroll to the right */
     }
 }
 

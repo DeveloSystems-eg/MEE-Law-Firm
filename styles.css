@@ -670,6 +670,10 @@ footer a:hover {
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
+    .service {
+        flex: 1 1 calc(50% - 1rem); /* Adjust for smaller screens */
+        margin: 0.5rem;
+    }
     .logo-placeholder {
         position: relative; /* Ensure it is positioned relative to other content */
         top: 0;
@@ -678,18 +682,24 @@ footer a:hover {
         height: 120px;
         margin: 0 auto; /* Center logo horizontally */
         display: block;
+        
     }
     .logo-placeholder img {
         width: 100%; /* Ensure the image scales well on mobile */
-        height: auto;
+        height: 100%;
     }
-   .language-switch {
-        position: relative; /* Fix position at the bottom */
-        left: 0;
-        right: 0;
-        gap: 10px; /* Space between the buttons */
-  
+ .language-switch {
+        justify-content: center; /* Center the buttons */
     }
+    
+
+    nav ul {
+        flex-direction: row; /* Stack the menu items vertically */
+        align-items: right;
+        justify-content: center;
+    }
+
+
     header {
         display: flex;
         flex-direction: column; /* Stack items vertically */
@@ -699,10 +709,6 @@ footer a:hover {
     header h1 {
         font-size: 24px; /* Reduce title size for mobile */
         margin-top: 20px;
-    }
-    nav ul {
-        display: block;
-        text-align: center;
     }
 
         /* Stack the lawyer card elements vertically */
@@ -762,6 +768,13 @@ footer a:hover {
             margin: 0 auto;
             margin-right: 170px; /* Center the card horizontally */
         }
+        body[dir="rtl"] .language-switch {
+            direction: rtl;
+            text-align: center; /* Keep text centered */
+            margin: 0 auto;
+            margin-right: 50px;
+            
+        }
     
         body[dir="rtl"] .contact-btn {
             margin-left: auto;
@@ -769,20 +782,35 @@ footer a:hover {
             width: 100%; /* Full-width button on mobile */
             max-width: 250px; /* Limit width */
         }
+        .service-modal-content {
+            width: 90%; /* Make the card wider on small screens */
+            padding: 40px; /* Add more padding */
+        }
+    
+        .service-modal-content h2 {
+            font-size: 28px; /* Bigger heading */
+        }
+    
+        .service-modal-content p {
+            font-size: 18px; /* Larger paragraph text */
+        }
+          .service {
+        max-width: 90%; /* Expand to 90% width on small screens */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .service img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .service h2 {
+        font-size: 20px;
+    }
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 1024px) {
-    .service {
-        flex: 1 1 calc(50% - 2rem); /* 2 services per row */
-    }
-
-    .lawyer-card {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 1290px) {
     .logo-placeholder {
         position: relative; /* Ensure it is positioned relative to other content */
         top: 0;
@@ -833,8 +861,7 @@ footer a:hover {
             flex-direction: column;
             align-items: center;
             background-color: #1e1e1e;
-          
-            margin: 40px;
+     
             border-radius: 10px;
             width: 100%; /* Ensures it looks good on mobile */
             max-width: 400px; /* Prevents it from becoming too wide */

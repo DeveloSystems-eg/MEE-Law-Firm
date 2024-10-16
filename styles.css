@@ -162,30 +162,30 @@ h2 {
 }
 #lawyers {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 75vh; /* Full height of the viewport */
-    background-color: #000;
-    padding: 0; /* Remove extra padding */
-    margin: 0; /* Remove margin */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    min-height: 100vh; /* Full height of the viewport */
+    background-color: #000; /* Optional: Background color for visibility */
+    padding: 20px; /* Add padding for layout */
+    margin: 0; /* Remove any margin that may affect alignment */
 }
 
 .lawyer-card {
     display: flex;
     flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
     background-color: #2a2a2a;
     border: 1px solid #444;
     border-radius: 10px;
     padding: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    align-items: center; /* Center content horizontally */
-    text-align: center; /* Center text */
-    width: 50%; /* Adjust width for different screen sizes */
-    max-width: 600px; /* Limit max width */
-    animation: fadeInUp 2s ease-out; /* Fade-in effect */
-    margin-left: 300px; /* Remove left margin */
-    margin-right: 0; 
+    width: 100%; /* Full width for small screens */
+    max-width: 400px; /* Restrict max width on larger screens */
+    text-align: center; /* Center text inside the card */
+    margin: 0 auto; /* Center the card horizontally */
 }
+
 body[dir="rtl"] .lawyer-card {
     margin-left: 0; /* Remove left margin */
     margin-right: 300px; /* Apply right margin */
@@ -265,7 +265,7 @@ body[dir="rtl"] .lawyer-details {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.8);
-    animation: fadeIn 0.5s ease-in-out; /* Fade-in modal */
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 .modal-content {
@@ -276,21 +276,25 @@ body[dir="rtl"] .lawyer-details {
     width: 40%;
     text-align: center;
     border-radius: 10px;
-    animation: zoomIn 0.5s ease-in-out; /* Zoom-in for modal content */
+    position: relative; /* Important to make the close button align within the modal */
 }
 
 .close {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
     color: #fff;
-    float: right;
     font-size: 28px;
     font-weight: bold;
+    cursor: pointer;
+    z-index: 2; /* Ensure it's on top of the modal content */
 }
 
 .close:hover, .close:focus {
     color: #a4764a;
     text-decoration: none;
-    cursor: pointer;
 }
+
 
 /* Clients Logos Container */
 /* Clients Logos Scrolling */
@@ -606,21 +610,26 @@ footer a:hover {
     width: 50%;
     text-align: center;
     border-radius: 10px;
-    animation: zoomIn 0.5s ease-in-out; /* Zoom-in for modal content */
+    animation: zoomIn 0.5s ease-in-out;
+    position: relative; /* Important to contain the absolutely positioned close button */
 }
 
 .close-service-modal {
+    position: absolute; /* Allows precise placement within the modal */
+    top: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
     color: #fff;
-    float: right;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+    z-index: 2; /* Ensure it stays on top of the modal content */
 }
 
 .close-service-modal:hover, .close-service-modal:focus {
     color: #a4764a;
     text-decoration: none;
 }
+
 
 /* CSS for service modal images */
 .service-modal img {

@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('contact-title').innerHTML = 'اتصل بنا';
             document.getElementById('location-title').innerHTML = 'عنواننا';
             document.getElementById('contact-info').innerHTML =
-                'البريد الإلكتروني: info@mee-lawfirm.com | الهاتف:‎ +20 1234 567 890';
+                'البريد الإلكتروني: info@mee-lawfirm.com | الهاتف:‎ +20 1063606886';
             document.getElementById('follow-us').innerHTML =
                 'تابعنا على: <a href="https://wa.me/message/C4DG267ASJ5HB1">واتساب</a> | ' +
                 '<a href="https://www.facebook.com/mohamedezzelrega?mibextid=JRoKGi">فيسبوك</a> | ' +
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 modalTitle.innerHTML = 'تواصل مع محمد عز الرجال';
                 modalEmail.innerHTML = 'البريد الإلكتروني: <a href="mailto:mezzalregal@lawfirm.com">mezzalregal@lawfirm.com</a>';
-                modalPhone.innerHTML = 'الهاتف: <a href="tel:+20123456789"> ‎ +20 1234 567 890</a>';
+                modalPhone.innerHTML = 'الهاتف: <a href="tel:+201063606886"> ‎ +20 1063606886</a>';
     
         } else {
             // Switch to English
@@ -231,14 +231,14 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('clients-title').innerHTML = 'Our Clients';
             document.getElementById('contact-title').innerHTML = 'Contact Us';
             document.getElementById('location-title').innerHTML = 'Our Location';
-            document.getElementById('contact-info').innerHTML = 'Email: info@mee-lawfirm.com | Phone: +20 1234 567 890';
+            document.getElementById('contact-info').innerHTML = 'Email: info@mee-lawfirm.com | Phone: +20 1063606886';
             document.getElementById('follow-us').innerHTML = 'Follow us: <a href="https://wa.me/message/C4DG267ASJ5HB1">WhatsApp</a> | <a href="https://www.facebook.com/mohamedezzelrega?mibextid=JRoKGi">Facebook</a> | <a href="https://t.me/+201063606886">Telegram</a>';
 
             // Footer Section
             document.querySelector('footer p').innerHTML = '&copy; 2024 MEE Law Firm. All rights reserved.';
             modalTitle.innerHTML = 'Contact Mohamed EzzElRegal';
             modalEmail.innerHTML = 'Email: <a href="mailto:mezzalregal@lawfirm.com">mezzalregal@lawfirm.com</a>';
-            modalPhone.innerHTML = 'Phone: <a href="tel:+20123456789">+20 123 456 789</a>';
+            modalPhone.innerHTML = 'Phone: <a href="tel:+201063606886">+20 1063606886</a>';
 
         }
 

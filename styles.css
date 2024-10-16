@@ -781,14 +781,14 @@ footer a:hover {
             direction: rtl;
             text-align: center; /* Keep text centered */
             margin: 0 auto;
-            margin-right: 50px;
+            
             
         }
         body[dir="rtl"] .logo-placeholder {
             direction: rtl;
             text-align: center; /* Keep text centered */
             margin: 0 auto;
-            margin-right: 100px;
+            margin-right: 80px;
             
         }
     

@@ -712,6 +712,7 @@ footer a:hover {
             /* padding: 20px; */
             text-align: center;
             width: 100%;
+            margin: 0 auto; 
             margin-left: 170px;
         
              /* Center text on mobile */
@@ -838,7 +839,8 @@ footer a:hover {
             width: 100%; /* Ensures it looks good on mobile */
             max-width: 400px; /* Prevents it from becoming too wide */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            text-align: center; /* Keep text centered */
+            margin: 0 auto;
         }
     
         /* Center and adjust the image size */

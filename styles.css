@@ -10,127 +10,586 @@ body {
     background: #1a1a1a;
     color: #fff;
     line-height: 1.6;
-    overflow-x: hidden;
-    animation: fadeIn 2s ease-in-out;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    animation: fadeIn 2s ease-in-out; /* Fade-in for body */
 }
 
 .container {
-    width: 80vw; /* Use vw for width to be responsive */
+    width: 80%;
     margin: auto;
     position: relative;
+    max-width: 1200px; /* Ensure it doesn't stretch too wide on large screens */
 }
 
 header {
     background: linear-gradient(90deg, #333, #4f4f4f);
     color: #fff;
-    padding: 2vh 0; /* Use vh for vertical padding */
-    border-bottom: #c59c6e 0.3vh solid;
+    padding: 0 30px; /* Reduced padding */
+    border-bottom: #c59c6e 3px solid;
     position: relative;
-    animation: slideDown 1s ease-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
 }
-
 header h1 {
     font-family: 'Georgia', serif;
-    font-size: 3.8vw; /* Use vw for font size */
+    font-size: 36px;
     text-align: center;
     font-weight: bold;
-    animation: popIn 1.5s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+/* Updated Logo Styles */
+.logo-placeholder {
+    width: 180px; /* Adjusted logo size */
+    height: 180px;
+    position: absolute;
+    top: 10px; /* Move the logo upwards */
+    left: 30px;
+    animation: slideUp 1.5s ease-out;
+    z-index: 1000;
+}
+
+body[dir="rtl"] .logo-placeholder {
+    left: auto;  /* Remove left positioning */
+    right: 20px; /* Add right positioning in RTL mode */
 }
 
 .logo-placeholder img {
-    width: 25vw;
-    height: 25vw; /* Keep aspect ratio by using vw */
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* Language switch button */
+/* Language switch button positioning */
+.language-switch {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 20px; /* Align near the top */
+    right: 30px; /* Positioned to the far right */
+}
+
+body[dir="rtl"] .language-switch {
+    right: auto; /* Remove right positioning */
+    left: 20px;  /* Move to the left side in RTL mode */
+}
+
 .language-switch button {
-    padding: 1vh 1.5vw; /* Use vh and vw for padding */
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.language-switch button:hover {
+    background-color: #c59c6e;
 }
 
 nav {
-    padding: 1.5vh 0;
+    background: #000;
+    text-align: center;
+    padding: 15px 0;
+    animation: slideUp 1.5s ease-out; /* Slide up effect for navbar */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    margin-right: 3vw; /* Use vw for margin */
+    display: inline-block;
+    margin-right: 30px; /* Default for LTR */
+}
+
+body[dir="rtl"] nav ul li {
+    margin-right: 0;
+    margin-left: 30px; /* Switch margins in RTL */
 }
 
 nav ul li a {
-    font-size: 1.8vw; /* Use vw for font size */
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #c59c6e; /* Change text color on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+section {
+    padding: 20px 0;
 }
 
 h2 {
-    font-size: 3vw; /* Use vw for section titles */
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #c59c6e;
+    animation: fadeIn 2s ease-in-out; /* Fade-in for section titles */
+}
+
+/* About Section */
+#about {
+    text-align: center; /* Center the text */
+}
+
+#about-title {
+    font-size: 30px;
+    text-align: center; /* Center the title */
+    margin-bottom: 20px;
+    color: #c59c6e;
 }
 
 #about-text {
-    font-size: 1.8vw; /* Use vw for text */
-    max-width: 80vw; /* Set max-width to be responsive */
+    font-size: 18px;
+    max-width: 800px; /* Set a max width to prevent the text from stretching too wide */
+    margin: 0 auto; /* Center the paragraph by using margin auto */
+    text-align: center; /* Ensure the text inside the container is centered */
+    color: #fff;
+    line-height: 1.6;
+}
+#lawyers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh; /* Full height of the viewport */
+    background-color: #000;
+    padding: 0; /* Remove extra padding */
+    margin: 0; /* Remove margin */
 }
 
 .lawyer-card {
-    padding: 3vh 2vw; /* Use vh and vw for padding */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+    width: 50%; /* Adjust width for different screen sizes */
+    max-width: 600px; /* Limit max width */
+    animation: fadeInUp 2s ease-out; /* Fade-in effect */
+    margin-left: 300px;
+}
+body[dir="rtl"] .lawyer-card {
+    margin-left: 0; /* Remove left margin */
+    margin-right: 300px; /* Apply right margin */
 }
 
+/* Lawyer Photo */
 .lawyer-photo {
-    width: 15vw;
-    height: 15vw; /* Responsive sizing */
+    width: 150px;
+    height: 150px;
+    border-radius: 10%;
+    object-fit: cover;
+    margin-bottom: 20px; /* Add space below the photo */
+    transition: transform 0.5s ease; /* Image zoom on hover */
+}
+.lawyer-name1{
+    margin-top: 20px;
 }
 
+.lawyer-photo:hover {
+    transform: scale(1.1); /* Zoom on hover */
+}
+
+/* Lawyer Details */
+.lawyer-details {
+    flex: none; /* Adjust to fit content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; /* Center the text inside details */
+}
+
+/* Ensure RTL support */
+body[dir="rtl"] .lawyer-details {
+    margin-left: 0; /* Remove margin for RTL */
+    margin-right: 0; /* Adjust text alignment for RTL */
+}
+
+
+/* Button Styles */
 .contact-btn {
-    padding: 1vh 2vw; /* Use vh and vw for padding */
-    margin-left: 2vw;
+    background-color: #3ee150;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    width: 50%;
+    align-self: center;
+    margin-top: 20px;
+}
+
+.contact-info {
+    color: #c59c6e; /* Use the same color as subtitles */
+    font-size: 1.2rem; /* Increase font size */
+    font-weight: bold; /* Make the text bold */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s ease; /* Add a smooth transition for hover effects */
+}
+
+.contact-info:hover {
+    color: #a4764a; /* Darken the color on hover */
+}
+
+
+.contact-btn:hover {
+    background-color: #3ee143;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn 0.5s ease-in-out; /* Fade-in modal */
 }
 
 .modal-content {
-    width: 40vw; /* Modal width is now responsive */
-    padding: 2vh 2vw;
+    background-color: #333;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    text-align: center;
+    border-radius: 10px;
+    animation: zoomIn 0.5s ease-in-out; /* Zoom-in for modal content */
+}
+
+.close {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #a4764a;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.clients-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden; /* Hide logos that go out of bounds */
+    position: relative;
+}
+
+.logo-slide {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    animation: scroll 30s linear infinite; /* Slower animation for infinite scrolling */
+}
+
+.logo-slide img {
+    width: 120px; /* Set fixed size for the logos */
+    height: 120px;
+    object-fit: contain;
+    padding: 10px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Slight shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-slide img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0); /* Start position */
+    }
+    100% {
+        transform: translateX(-50%); /* Scroll the entire row by half */
+    }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .logo-slide img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+
+
+
+/* News Ticker */
+#news {
+    background-color: #222;
+    padding: 10px 0;
+    color: #c59c6e; /* Gold text color */
+    text-align: center;
+    overflow: hidden; /* Hide overflow for smooth scrolling */
+    margin-top: 20px;
+    z-index: 1;
+}
+
+/* Ministry of Justice and Council of State Logo */
+.Ministry, .HeadquartersCouncil {
+    width: 50px; /* Adjust the size of the logos */
+    height: auto; /* Maintain aspect ratio */
+    margin: 5px; /* Add some margin for spacing */
+    display: inline-block; /* Ensure logos are aligned next to each other */
+    vertical-align: middle; /* Align logos to the middle */
+}
+
+.logo-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center; /* Center the logos */
+}
+
+.news-ticker {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* LTR Animation */
+.news-ticker-ltr {
+    animation: tickerMoveLTR 20s linear infinite;
+}
+
+@keyframes tickerMoveLTR {
+    0% { 
+        transform: translateX(100%);
+    }
+    100% { 
+        transform: translateX(-100%);
+    }
+}
+
+/* RTL Animation */
+.news-ticker-rtl {
+    animation: tickerMoveRTL 20s linear infinite;
+}
+
+@keyframes tickerMoveRTL {
+    0% { 
+        transform: translateX(-100%);
+    }
+    100% { 
+        transform: translateX(100%);
+    }
+}
+
+/* Services Section */
+#services {
+    padding: 4rem 0;
+    background: #1a1a1a;
+    text-align: center;
+}
+
+.service-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .service {
-    padding: 2vh 1.5vw;
-    margin: 1vh;
+    flex: 1 1 calc(25% - 2rem);
+    margin: 1rem;
+    padding: 1.5rem;
+    background: #444;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 2s ease-out; /* Fade-in upwards */
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .service img {
-    width: 10vw; /* Use vw for image size */
-    height: 10vw;
+    width: 100px; /* Set fixed size for uniformity */
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease; /* Image zoom on hover */
 }
 
+.service:hover img {
+    transform: scale(1.2); /* Zoom on hover */
+}
+
+/* Consultation Form */
 #consultation {
-    padding: 4vh;
-    margin-top: 4vh;
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+#consultation-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 #consultation-form input, #consultation-form textarea {
-    padding: 1vh;
-    margin-bottom: 2vh;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: #555;
 }
 
 #consultation-form button {
-    padding: 1vh 2vw;
+    background-color: #c59c6e;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
+#consultation-form button:hover {
+    background-color: #a4764a;
+}
+
+/* Case Archive Section */
+#archive {
+    background-color: #1e1e1e;
+    padding: 40px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+#archive-title {
+    text-align: center;
+    color: #c59c6e;
+}
+
+#archive-text {
+    text-align: center;
+    color: #fff;
+}
+
+/* Center the Contact Us section */
+#contact {
+    background-color: #1a1a1a;
+    padding: 40px 0;
+    text-align: center; /* Center the content */
+    color: #fff;
+}
+
+#contact-info, #follow-us {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* Footer Styling */
 footer {
-    padding: 2vh 0;
-    font-size: 1.6vw;
+    background-color: #000;
+    padding: 20px 0;
+    text-align: center; /* Center the content */
+    color: #fff;
+    font-size: 16px;
+    direction: ltr; 
 }
 
+footer a {
+    color: #c59c6e; /* Gold color for the link */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+#develo-link {
+    margin-top: 10px;
+    display: inline-block; /* Keeps the link inline and centered */
+    text-align: center; /* Make sure it's centered */
+    direction: ltr; /* Keep the text direction LTR for branding consistency */
+}
+
+.location-container {
+    text-align: center; /* Center the content */
+    margin: 20px 0; /* Add some margin around the container */
+}
+
+.location-title {
+    font-size: 18px;
+    color: #fff; /* Adjust color based on your website's theme */
+    margin-bottom: 10px; /* Space between title and image */
+}
+
+.location {
+    width: 35%;
+    height: auto;
+    cursor: pointer; /* Pointer cursor to indicate it's clickable */
+}
+
+.location-container a {
+    display: inline-block; /* Ensure the image stays inline */
+}
+#modal-email a, #modal-phone a {
+    color: #c59c6e; /* Use the same color as subtitles */
+    font-size: 1.2rem; /* Increase font size */
+    font-weight: bold; /* Make the text bold */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s ease; /* Optional: Removes underline */
+}
+
+#modal-email a:hover, #modal-phone a:hover {
+    text-decoration: underline; /* Optional: Adds underline on hover */
+}
+
+
+
+/* Animations */
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
 
 @keyframes slideDown {
-    0% { transform: translateY(-10vh); }
+    0% { transform: translateY(-100px); }
     100% { transform: translateY(0); }
 }
 
 @keyframes slideUp {
-    0% { transform: translateY(10vh); }
+    0% { transform: translateY(100px); }
     100% { transform: translateY(0); }
 }
 
@@ -145,6 +604,279 @@ footer {
 }
 
 @keyframes fadeInUp {
-    0% { opacity: 0; transform: translateY(5vh); }
+    0% { opacity: 0; transform: translateY(50px); }
     100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .logo-placeholder {
+        position: relative; /* Ensure it is positioned relative to other content */
+        top: 0;
+        left: 0; /* Align logo to the left */
+        width: 120px; /* Adjust logo size for mobile */
+        height: 120px;
+        margin: 0 auto; /* Center logo horizontally */
+        display: block;
+    }
+    .logo-placeholder img {
+        width: 100%; /* Ensure the image scales well on mobile */
+        height: auto;
+    }
+   .language-switch {
+        position: relative; /* Fix position at the bottom */
+        left: 0;
+        right: 0;
+        gap: 10px; /* Space between the buttons */
+  
+    }
+    header {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center everything in the header */
+        padding: 20px 0;
+    }
+    header h1 {
+        font-size: 24px; /* Reduce title size for mobile */
+        margin-top: 20px;
+    }
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+
+        /* Stack the lawyer card elements vertically */
+    .lawyer-card {
+            flex-direction: column; /* Stack image and details */
+            align-items: center; /* Center align on mobile */
+            /* padding: 20px; */
+            text-align: center;
+            width: 100%;
+        
+             /* Center text on mobile */
+        }
+    
+        /* Center and adjust the image size */
+    .lawyer-photo {
+            width: 120px; /* Smaller image on mobile */
+            height: 120px;
+            margin-right: 0; /* Remove margin on the right */
+            margin-bottom: 15px; /* Add space below the image */
+        }
+    
+        /* Adjust button alignment for mobile */
+    .contact-btn {
+            align-self: center; /* Center the button */
+            margin-top: 15px; /* Add space above the button */
+        }
+    
+        /* Adjust text alignment for mobile */
+    .lawyer-details {
+            text-align: center; /* Center the lawyer details text */
+        }
+    .modal-content {
+            width: 90%; /* Ensure the modal takes most of the screen on small devices */
+            padding: 15px;
+        }
+    
+    .close {
+            font-size: 24px; /* Adjust close button size for smaller screens */
+        }
+    
+    .modal-content a {
+            font-size: 16px; /* Adjust link font size for smaller devices */
+        }
+        body[dir="rtl"] #lawyers {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Full height on mobile */
+            padding: 20px;
+        }
+    
+        body[dir="rtl"] .lawyer-card {
+            direction: rtl;
+            text-align: center; /* Keep text centered */
+            margin: 0 auto; /* Center the card horizontally */
+        }
+    
+        body[dir="rtl"] .contact-btn {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%; /* Full-width button on mobile */
+            max-width: 250px; /* Limit width */
+        }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .service {
+        flex: 1 1 calc(50% - 2rem); /* 2 services per row */
+    }
+
+    .lawyer-card {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-placeholder {
+        position: relative; /* Ensure it is positioned relative to other content */
+        top: 0;
+        left: 0; /* Align logo to the left */
+        width: 120px; /* Adjust logo size for mobile */
+        height: 120px;
+        margin: 0 auto; /* Center logo horizontally */
+        display: block;
+    }
+    .logo-placeholder img {
+        width: 100%; /* Ensure the image scales well on mobile */
+        height: auto;
+    }
+   .language-switch {
+        position: relative; /* Fix position at the bottom */
+        left: 0;
+        right: 0;
+        gap: 10px; /* Space between the buttons */
+  
+    }
+    header {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center everything in the header */
+        padding: 20px 0;
+    }
+    header h1 {
+        font-size: 24px; /* Reduce title size for mobile */
+        margin-top: 20px;
+    }
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+        /* Stack the lawyer card elements vertically */
+        #lawyers {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            min-height: 100vh; /* Ensure it takes the full height of the viewport */
+            background-color: #000; /* Optional: to match your design */
+            padding: 20px; /* Add padding for better layout */
+        }
+        
+        /* General styling for the lawyer card */
+        .lawyer-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #1e1e1e;
+          
+            margin: 40px;
+            border-radius: 10px;
+            width: 100%; /* Ensures it looks good on mobile */
+            max-width: 400px; /* Prevents it from becoming too wide */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+    
+        /* Center and adjust the image size */
+    .lawyer-photo {
+            width: 120px; /* Smaller image on mobile */
+            height: 120px;
+            margin-right: 0; /* Remove margin on the right */
+            margin-bottom: 15px; /* Add space below the image */
+        }
+    
+        /* Adjust button alignment for mobile */
+    .contact-btn {
+            align-self: center; /* Center the button */
+            margin-top: 15px; /* Add space above the button */
+        }
+    
+        /* Adjust text alignment for mobile */
+    .lawyer-details {
+            text-align: center; /* Center the lawyer details text */
+        }
+    .modal-content {
+            width: 90%; /* Ensure the modal takes most of the screen on small devices */
+            padding: 15px;
+        }
+    
+    .close {
+            font-size: 24px; /* Adjust close button size for smaller screens */
+        }
+    
+    .modal-content a {
+            font-size: 16px; /* Adjust link font size for smaller devices */
+        }
+        body[dir="rtl"] #lawyers {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Full height on mobile */
+            padding: 20px;
+        }
+    
+        body[dir="rtl"] .lawyer-card {
+            direction: rtl;
+            text-align: center; /* Keep text centered */
+            margin: 0 auto; /* Center the card horizontally */
+        }
+    
+        body[dir="rtl"] .contact-btn {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%; /* Full-width button on mobile */
+            max-width: 250px; /* Limit width */
+        }
+}
+
+/* Modal Styles for Service Cards */
+.service-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.service-modal-content {
+    background-color: #333;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+    animation: zoomIn 0.5s ease-in-out; /* Zoom-in for modal content */
+}
+
+.close-service-modal {
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-service-modal:hover, .close-service-modal:focus {
+    color: #a4764a;
+    text-decoration: none;
+}
+
+/* CSS for service modal images */
+.service-modal img {
+    width: 100px; /* Adjust the width to a smaller size */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Ensure the image behaves as a block-level element */
+    margin: 0 auto 20px auto; /* Center the image and add some space below it */
+}
+
+.service-modal-content {
+    text-align: center; /* Center the content, including the images and text */
+    padding: 20px; /* Add some padding inside the modal content */
 }

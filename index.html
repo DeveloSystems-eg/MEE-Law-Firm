@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MEE Law Firm - Legal Services</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
+    <script src="scripts.js"></script>
+
 </head>
 <body>
     <header>
@@ -13,7 +14,7 @@
             <h1 id="title">MEE Law Firm</h1>
             <!-- Logo Placeholder -->
             <div class="logo-placeholder">
-                <img src="im/legal assistance (1).png" alt="Law Firm Logo" class="logo">
+                <img src="im/WhatsApp Image 2024-10-13 at 5.57.03 PM.jpeg" alt="Law Firm Logo" class="logo">
             </div>
             <div class="language-switch">
                 <button onclick="switchLanguage('en')">English</button>
@@ -26,6 +27,8 @@
         <ul id="nav-bar">
             <li><a href="#about" id="about-us-link">About Us</a></li>
             <li><a href="#lawyers" id="our-lawyers-link">Our Lawyers</a></li>
+            <li><a href="#services" id="services-link">Consultations</a></li>
+            <li><a href="#clients" id="clients-link">Our Clients</a></li>
             <li><a href="#contact" id="contact-link">Contact</a></li>
         </ul>
     </nav>
@@ -33,7 +36,7 @@
     <!-- News Ticker Section -->
 <section id="news">
     <div class="news-ticker">
-        <p>Welcome to MEE Law Firm! With over 15 years of experience in providing expert legal and economic consultations, we are here to support you with all your legal needs. Whether it’s civil, economic, or family law, our dedicated team is ready to offer the best legal counsel and representation across Egypt and beyond.</p>
+        <p>Legal consultations are an integral part of a lawyer's core work. They provide protection from potential disputes, help the client avoid many possible troubles, and guide them toward the safest and most stable paths. This is why our lawyers only offer their consultation services after thorough research and deep study. We establish a secure and fruitful legal and economic vision for entrepreneurs.</p>
     </div>
 </section>
 
@@ -42,7 +45,7 @@
     <section id="about">
         <div class="container">
             <h2 id="about-title">About MEE Law Firm</h2>
-            <p id="about-text">We specialize in providing expert legal and economic consultations, facilitating the establishment, restructuring, and expansion of companies across the Arab Republic of Egypt, handling a wide range of civil, economic, commercial, and criminal cases, offering dedicated services for family law and representation in family courts, and managing cases before the State Council with precise, well-researched counsel in administrative matters.</p>
+            <p id="about-text">The halls of courts and government departments bear witness to our long-standing expertise in legal practice and litigation. Our robes reflect our seriousness and precision, and our clients testify to our dedication and achievements throughout the years in all branches of law. We invest in experience, both individually and collectively. Since the texts of Egyptian law alone exceed 5 million provisions, not to mention private and public international law, agreements, and international constitutions, each branch of law is interconnected. Specialization is what enables excellence without losing connection with colleagues in other legal specialties, ensuring that the goal is achieved efficiently. The law office of Mohamed EzzElRegal offers all litigation services before courts of all levels and types—civil, commercial, criminal, administrative, economic, and arbitration—each in its specialization. This requires an institution.</p>
         </div>
     </section>
 
@@ -51,11 +54,14 @@
         <div class="container">
             <h2 id="lawyers-title">Meet Our Lawyers</h2>
             <div class="lawyer-card">
-                <img src="im/WhatsApp Image 2024-09-21 at 12.50.23 AM.jpeg" class="lawyer-photo">
+                <img src="im/WhatsApp Image 2024-10-14 at 3.12.33 PM.jpeg" class="lawyer-photo">
                 <div class="lawyer-details">
                     <h3 id="lawyer-name1">Mohamed EzzElRegal</h3>
                     <p id="lawyer-description1">Attorney at High Court of Appeal and the Council of State</p>
-                    <p id="lawyer-brief1">Legal Advisor for Petrogistix Egypt Petroleum Services</p>
+                    <div class="logo-container">
+                        <img src="im/HeadquartersCouncil.png" class="HeadquartersCouncil">
+                        <img src="im/وزارة_العدل_المصرية.png" class="Ministry">
+                    </div>
                     <a href="" class="contact-btn" onclick="openModal()">Book a Session</a>
                 </div>
             </div>
@@ -65,46 +71,310 @@
     <div id="sessionModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
-            <h3>Contact Mohamed EzzElRegal</h3>
-            <p>Email: <a href="mailto:mezzalregal@lawfirm.com">mezzalregal@lawfirm.com</a></p>
-            <p>Phone: <a href="tel:+20123456789">+20 123 456 789</a></p>
+            <h3 id="modal-title">Contact Mohamed EzzElRegal</h3>
+            <p id="modal-email">Email: <a href="mailto:mezzalregal@lawfirm.com">mezzalregal@lawfirm.com</a></p>
+            <p id="modal-phone">Phone: <a href="tel:+201063606886"> ++20 1063606886</a></p>
+          
         </div>
     </div>
     
     
+    
 
-    <section id="services">
-        <div class="container">
-            <h2>Services We Provide</h2>
-            <div class="service-grid">
-                <div class="service" id="service-web">
-                    <img  src="im/consultation.png">
-                    <h3>Legal and Economic Consultations</h3>
-                    <!-- <p>High-quality web development services tailored to your business needs.</p> -->
-                </div>
-                <div class="service" id="service-mobile">
-                    <img  src="im/enterprise.png">
-                    <h3>Establishing, modifying and establishing branches of all companies</h3>
-                    <!-- <p>Creating seamless and responsive mobile applications for all platforms.</p> -->
-                </div>
-                <div class="service" id="service-data">
-                    <img  src="im/law.png">
-                    <h3>Civil, economic, commercial and criminal cases</h3>
-                    <!-- <p>Providing insights through data analysis to drive your business forward.</p> -->
-                </div>
-                <div class="service" id="service-custom">
-                    <img  src="im/family.png">
-                    <h3>Family cases and courts</h3>
-                    <!-- <p>Developing custom software to solve unique business challenges.</p> -->
-                </div>
-                <div class="service" id="service-custom">
-                    <img  src="im/city-council.png">
-                    <h3>State Council Cases</h3>
-                    <!-- <p>Developing custom software to solve unique business challenges.</p> -->
-                </div>
+    <!-- Services Section -->
+<section id="services">
+    <div class="container">
+        <h2>Legal consultations</h2>
+        <div class="service-grid">
+            <div class="service" id="service-web" onclick="openServiceModal('service-web-modal')">
+                <img src="im/consultation.png">
+                <h3>Legal and Economic Consultations</h3>
+            </div>
+            <div class="service" id="service-mobile" onclick="openServiceModal('service-mobile-modal')">
+                <img src="im/enterprise.png">
+                <h3>Establishing, modifying and establishing branches of all companies</h3>
+            </div>
+            <div class="service" id="service-data" onclick="openServiceModal('service-data-modal')">
+                <img src="im/law.png">
+                <h3>Civil, economic, commercial and criminal cases</h3>
+            </div>
+            <div class="service" id="service-custom" onclick="openServiceModal('service-custom-modal')">
+                <img src="im/family.png">
+                <h3>Family cases and courts</h3>
+            </div>
+            <div class="service" id="service-council" onclick="openServiceModal('service-council-modal')">
+                <img src="im/city-council.png">
+                <h3>State Council Cases</h3>
+            </div>
+            <!-- Intellectual Property Protection -->
+            <div class="service" id="service-ip" onclick="openServiceModal('service-ip-modal')">
+                <img src="im/intellectual-property.png">
+                <h3>Intellectual Property Protection</h3>
+            </div>
+
+            <!-- Contract Drafting -->
+            <div class="service" id="service-contract" onclick="openServiceModal('service-contract-modal')">
+                <img src="im/contract.png">
+                <h3>Contract Drafting</h3>
+            </div>
+
+            <!-- Administrative Law -->
+            <div class="service" id="service-admin" onclick="openServiceModal('service-admin-modal')">
+                <img src="im/administrative-law.png">
+                <h3>Administrative Law</h3>
+            </div>
+
+            <!-- Labor Law -->
+            <div class="service" id="service-labor" onclick="openServiceModal('service-labor-modal')">
+                <img src="im/labour-law.png">
+                <h3>Labor Law</h3>
+            </div>
+
+            <!-- Tax Appeals -->
+            <div class="service" id="service-tax" onclick="openServiceModal('service-tax-modal')">
+                <img src="im/vat.png">
+                <h3>Tax Appeals</h3>
+            </div>
+
+            <!-- Social Services -->
+            <div class="service" id="service-social" onclick="openServiceModal('service-social-modal')">
+                <img src="im/public-service.png">
+                <h3>Social Services</h3>
+            </div>
+
+            <!-- Felonies Services -->
+            <div class="service" id="service-Felonies" onclick="openServiceModal('service-Felonies-modal')">
+                <img src="im/jail.png">
+                <h3>Felonies</h3>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Modal Template for Each Service -->
+<!-- Web Service Modal -->
+<!-- Web Service Modal (Legal and Economic Consultations) -->
+<div id="service-web-modal" class="service-modal">
+    <div class="service-modal-content">
+        <span class="close-service-modal" onclick="closeServiceModal('service-web-modal')">&times;</span>
+        <img src="im/consultation.png">
+        <h3>Legal and Economic Consultations</h3>
+        <p>
+            1. Providing legal advice.<br>
+            2. Drafting and reviewing all civil, commercial, and corporate contracts.<br>
+            3. Pleading and filing all criminal cases (misdemeanors and felonies) in all criminal courts.<br>
+            4. Pleading and filing all civil cases in all civil courts of all levels.<br>
+            5. Pleading and filing all commercial cases in all commercial courts of all levels.<br>
+            6. Pleading and filing all labor cases in all labor courts of all levels.<br>
+            7. Pleading and filing all economic cases in all economic courts of all levels.<br>
+            8. Pleading and filing all tax appeals in all courts of all levels.<br>
+            9. Registering all units with the real estate registration authority and notarization.
+        </p>
+    </div>
+</div>
+
+
+<!-- Mobile Service Modal -->
+<div id="service-mobile-modal" class="service-modal">
+    <div class="service-modal-content">
+        <img src="im/enterprise.png">
+        <span class="close-service-modal" onclick="closeServiceModal('service-mobile-modal')">&times;</span>
+        <h3>Establishing, modifying and establishing branches of all companies</h3>
+        <p> 1- Providing legal and economic advice before establishing your company.<br>
+            2- Establishing and creating all types of partnerships.<br>
+            3- Establishing and creating all types of corporations in accordance with Law No. 159 of 1981.<br>
+            4- Establishing and creating all types of corporations in accordance with Law No. 72 of 2017.<br>
+            5- Modifying all companies (mergers – changing laws – dissolution – liquidation – deletion).<br>
+            6- Creating branches for Egyptian and foreign companies.<br>
+            7- Completing investor residence permits and renewals.<br>
+            8- Providing services for renewing existing commercial registrations.<br>
+            9- Registering in the exporters and importers register and obtaining import and export cards.<br>
+            10- Registering foreign companies with the General Organization for Export and Import Control.
+            </p>
+    </div>
+</div>
+
+<!-- Data Service Modal -->
+<div id="service-data-modal" class="service-modal">
+    <div class="service-modal-content">
+        <img src="im/law.png">
+        <span class="close-service-modal" onclick="closeServiceModal('service-data-modal')">&times;</span>
+        <h3>Civil, economic, commercial and criminal cases</h3>
+        <p>We effectively cover civil, economic, commercial, and criminal cases, with a focus on precise legal consultations and thorough procedures to ensure optimal results.</p>
+    </div>
+</div>
+
+<!-- Custom Service Modal -->
+<div id="service-custom-modal" class="service-modal">
+    <div class="service-modal-content">
+        <img src="im/family.png">
+        <span class="close-service-modal" onclick="closeServiceModal('service-custom-modal')">&times;</span>
+        <h3>Family cases and courts</h3>
+        <p>1- Providing legal advice on family disputes.<br>
+            2- Pleading and attending all cases before family courts at all levels.<br>
+            3- Obtaining and enforcing enabling orders.<br>
+            4- Alimony cases of all types and their enforcement.</p>
+    </div>
+</div>
+
+<!-- Council Service Modal -->
+<div id="service-council-modal" class="service-modal">
+    <div class="service-modal-content">
+        <img src="im/city-council.png">
+        <span class="close-service-modal" onclick="closeServiceModal('service-council-modal')">&times;</span>
+        <h3>State Council Cases</h3>
+        <p>1- Providing legal advice on administrative cases.<br>
+            2- Pleading, attending, and filing all appeals before administrative and disciplinary courts.<br>
+            3- Pleading, attending, and filing all appeals before the administrative judiciary.<br>
+            4- Pleading, attending, and filing all appeals before the Supreme Administrative Court.<br> Cases of cancellation, compensation, disciplinary actions, administrative contracts, removal of names from criminal records, employment bypass, individual settlements, and leave balances.
+</p>
+    </div>
+</div>
+
+<!-- Intellectual Property Protection Modal -->
+<div id="service-ip-modal" class="service-modal">
+    <div class="service-modal-content">
+        <img src="im/intellectual-property.png">
+        <span class="close-service-modal" onclick="closeServiceModal('service-ip-modal')">&times;</span>
+        <h3>Intellectual Property Protection</h3>
+        <p>Because a good idea deserves protection, whether it’s a trademark, industrial design, artistic work, or patent, intellectual property is the real capital in the economic market. We provide local and international protection based on the WIPO agreement.</p>
+    </div>
+</div>
+
+<!-- Contract Drafting Modal -->
+<div id="service-contract-modal" class="service-modal">
+    <div class="service-modal-content">
+        <img src="im/contract.png">
+        <span class="close-service-modal" onclick="closeServiceModal('service-contract-modal')">&times;</span>
+        <h3>Contract Drafting</h3>
+        <p>Good contract drafting requires a skilled writer, legally and linguistically, capable of evaluating the concept before the words. A well-drafted contract prevents disputes and ensures fairness. Our experienced team drafts and reviews contracts with expertise, predicting potential issues and avoiding them during the drafting process.</p>
+    </div>
+</div>
+
+<!-- Administrative Law Modal -->
+<div id="service-admin-modal" class="service-modal">
+    <div class="service-modal-content">
+        <img src="im/administrative-law.png">
+        <span class="close-service-modal" onclick="closeServiceModal('service-admin-modal')">&times;</span>
+        <h3>Administrative Law</h3>
+        <p>We handle administrative law cases at all levels in the State Council courts, whether they relate to public employees, government institutions, decisions, regulations, or contracts.</p>
+    </div>
+</div>
+
+<!-- Labor Law Modal -->
+<div id="service-labor-modal" class="service-modal">
+    <div class="service-modal-content">
+        <img src="im/labour-law.png">
+        <span class="close-service-modal" onclick="closeServiceModal('service-labor-modal')">&times;</span>
+        <h3>Labor Law</h3>
+        <p>The rights of workers are essential for their continued employment. We ensure that workers, often the weaker party, are protected against powerful corporations and economic forces.</p>
+    </div>
+</div>
+
+<!-- Tax Appeals Modal -->
+<div id="service-tax-modal" class="service-modal">
+    <div class="service-modal-content">
+        <img src="im/vat.png">
+        <span class="close-service-modal" onclick="closeServiceModal('service-tax-modal')">&times;</span>
+        <h3>Tax Appeals</h3>
+        <p>Our dedicated financial department comprises skilled auditors and legal accountants specializing in preparing tax appeal memos, ensuring efficiency and time management.</p>
+    </div>
+</div>
+
+<!-- Social Services Modal -->
+<div id="service-social-modal" class="service-modal">
+    <div class="service-modal-content">
+        <img src="im/public-service.png">
+        <span class="close-service-modal" onclick="closeServiceModal('service-social-modal')">&times;</span>
+        <h3>Social Services</h3>
+        <p>We believe in the importance of social services and contribute to initiatives that protect human rights, such as the right to security, public order, access to knowledge, a green environment, and the welfare of society.</p>
+    </div>
+</div>
+
+<!-- Felonies Services Modal -->
+<div id="service-Felonies-modal" class="service-modal">
+    <div class="service-modal-content">
+        <img src="im/jail.png">
+        <span class="close-service-modal" onclick="closeServiceModal('service-Felonies-modal')">&times;</span>
+        <h3>Felonies</h3>
+        <p>The defendant is innocent until proven guilty... Therefore, we honorably defend justice and the enforcement of the law, ensuring individuals peace of mind before the state.</p>
+    </div>
+</div>
+
+<section id="clients">
+    <div class="container">
+        <h2 id="clients-title">Our Clients</h2>
+        <div class="clients-logos">
+            <div class="logo-slide">
+                <a href="" target="_blank">
+                    <img src="im/شركة-ركاز-للتطوير-العقاري.webp" alt="rekaz">
+                </a>
+                <a href="" target="_blank">
+                    <img src="im/alwafd.webp" alt="alwafd">
+                </a>
+                <a href="" target="_blank">
+                    <img src="im/develo.png" alt="Develo">
+                </a>
+                <a href="" target="_blank">
+                    <img src="im/arabian.png" alt="arabian">
+                </a>
+                <a href="" target="_blank">
+                    <img src="im/indu.jpeg" alt="indu">
+                </a>
+                <a href="" target="_blank">
+                    <img src="im/petro.jpeg" alt="petro">
+                </a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const logoSlide = document.querySelector('.logo-slide');
+        const logos = Array.from(logoSlide.children);  // Convert NodeList to array
+        let logoWidth = logos[0].getBoundingClientRect().width; // Get the width of each logo
+        let speed = 1; // Speed of the carousel
+        let position = 0; // Initial position
+
+        // Function to clone logos if necessary
+        function cloneLogos() {
+            logos.forEach(logo => {
+                const clonedLogo = logo.cloneNode(true);
+                logoSlide.appendChild(clonedLogo);
+            });
+        }
+
+        // Function to move the carousel
+        function moveCarousel() {
+            // Adjust position by the speed value
+            position -= speed;
+            logoSlide.style.transform = `translateX(${position}px)`;  // Fix template literal syntax
+        
+            // Get the first logo element
+            const firstLogo = logoSlide.children[0];
+            const firstLogoRect = firstLogo.getBoundingClientRect();
+            const slideRect = logoSlide.getBoundingClientRect();
+        
+            // Check if the first logo is completely out of view
+            if (firstLogoRect.right < slideRect.left) {
+                // Move the first logo to the end
+                logoSlide.appendChild(firstLogo);
+        
+                // Adjust position so the movement appears seamless
+                position += firstLogoRect.width;  // Use the actual width of the first logo
+            }
+        }
+        
+        // Clone logos to create the infinite effect
+        cloneLogos();
+
+        // Continuously move the carousel
+        setInterval(moveCarousel, 20); // Adjust this value to control speed
+    });
+</script>
+
     
 
     <!-- Contact Section -->
@@ -113,10 +383,18 @@
             <h2 id="contact-title">Contact Us</h2>
             <p id="contact-info">Email: info@mee-lawfirm.com | Phone: +20 1234 567 890</p>
             <p id="follow-us">Follow us: 
-                <a href="#">LinkedIn</a> | 
-                <a href="#">Facebook</a> | 
-                <a href="#">Twitter</a>
+                <a href="https://wa.me/message/C4DG267ASJ5HB1">WhatsApp</a> | 
+                <a href="https://www.facebook.com/mohamedezzelrega?mibextid=JRoKGi">Facebook</a> | 
+                <a href="https://t.me/+201063606886">Telegram</a>
             </p>
+            <div class="location-container">
+                <h3 id="location-title" class="location-title">Our Location</h3>
+
+                <a href="https://maps.app.goo.gl/QkXmHrDCaVE7SgyGA" target="_blank">
+                    <img src="im/location.png" alt="location" class="location">
+                </a>
+            </div>
+            
         </div>
     </section>
 

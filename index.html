@@ -302,11 +302,30 @@
     </div>
 </div>
 
-<section id="clients">
+<section id="clients"> 
     <div class="container">
         <h2 id="clients-title">Our Clients</h2>
         <div class="clients-logos">
             <div class="logo-slide">
+                <a href="" target="_blank">
+                    <img src="im/شركة-ركاز-للتطوير-العقاري.webp" alt="rekaz">
+                </a>
+                <a href="" target="_blank">
+                    <img src="im/alwafd.webp" alt="alwafd">
+                </a>
+                <a href="" target="_blank">
+                    <img src="im/develo.png" alt="Develo">
+                </a>
+                <a href="" target="_blank">
+                    <img src="im/arabian.png" alt="arabian">
+                </a>
+                <a href="" target="_blank">
+                    <img src="im/indu.jpeg" alt="indu">
+                </a>
+                <a href="" target="_blank">
+                    <img src="im/petro.jpeg" alt="petro">
+                </a>
+                <!-- Duplicate the logos for smooth looping -->
                 <a href="" target="_blank">
                     <img src="im/شركة-ركاز-للتطوير-العقاري.webp" alt="rekaz">
                 </a>
@@ -330,49 +349,10 @@
     </div>
 </section>
 
+</section>
+
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const logoSlide = document.querySelector('.logo-slide');
-        const logos = Array.from(logoSlide.children);  // Convert NodeList to array
-        let logoWidth = logos[0].getBoundingClientRect().width; // Get the width of each logo
-        let speed = 1; // Speed of the carousel
-        let position = 0; // Initial position
 
-        // Function to clone logos if necessary
-        function cloneLogos() {
-            logos.forEach(logo => {
-                const clonedLogo = logo.cloneNode(true);
-                logoSlide.appendChild(clonedLogo);
-            });
-        }
-
-        // Function to move the carousel
-        function moveCarousel() {
-            // Adjust position by the speed value
-            position -= speed;
-            logoSlide.style.transform = `translateX(${position}px)`;  // Fix template literal syntax
-        
-            // Get the first logo element
-            const firstLogo = logoSlide.children[0];
-            const firstLogoRect = firstLogo.getBoundingClientRect();
-            const slideRect = logoSlide.getBoundingClientRect();
-        
-            // Check if the first logo is completely out of view
-            if (firstLogoRect.right < slideRect.left) {
-                // Move the first logo to the end
-                logoSlide.appendChild(firstLogo);
-        
-                // Adjust position so the movement appears seamless
-                position += firstLogoRect.width;  // Use the actual width of the first logo
-            }
-        }
-        
-        // Clone logos to create the infinite effect
-        cloneLogos();
-
-        // Continuously move the carousel
-        setInterval(moveCarousel, 20); // Adjust this value to control speed
-    });
 </script>
 
     

@@ -790,10 +790,24 @@ footer a:hover {
         body[dir="rtl"] .logo-placeholder {
             direction: rtl;
             text-align: center;
+            justify-content: center;
+              /* Keep text centered */
+          
+            
+            
+        }
+        body[dir="rtl"] .logo-placeholder img {
+            direction: rtl;
+            text-align: center;
             justify-content: center;  /* Keep text centered */
           
             
         }
+        body[dir="rtl"] .language-switch {
+            justify-content: left;
+        
+        }
+        
     
         body[dir="rtl"] .contact-btn {
             margin-left: auto;

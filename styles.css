@@ -702,12 +702,25 @@ footer a:hover {
     }
     
 
-    nav ul {
-        flex-direction: row; /* Stack the menu items vertically */
-        align-items: right;
-        justify-content: center;
+    nav ul li {
+        
+        flex-direction: column; /* Stack items vertically in RTL too */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Align items vertically */
+        width: 100%;
+        text-align: center;
+        margin:  auto; /* Center all text */
+        
     }
-
+    body[dir="rtl"] nav ul li {
+        direction: rtl;
+        flex-direction: column; /* Stack items vertically in RTL too */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Align items vertically */
+        width: 100%;
+        text-align: center;
+        margin:  auto; /* Center all text */
+    }
 
     header {
         display: flex;
@@ -809,9 +822,9 @@ footer a:hover {
             direction: rtl;
             text-align: center;
             justify-content: center;
-            margin-right: 90px;
+            margin-right: 120px;
             display: flex;
-            margin-right: 90px;
+           
         
         }
         

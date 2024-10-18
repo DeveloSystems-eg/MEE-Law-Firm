@@ -248,17 +248,6 @@ body[dir="rtl"] .lawyer-details {
     margin-top: 20px;
 }
 
-.contact-info {
-    color: #c59c6e; /* Use the same color as subtitles */
-    font-size: 1.2rem; /* Increase font size */
-    font-weight: bold; /* Make the text bold */
-    text-decoration: none; /* Remove underline from links */
-    transition: color 0.3s ease; /* Add a smooth transition for hover effects */
-}
-
-.contact-info:hover {
-    color: #a4764a; /* Darken the color on hover */
-}
 
 
 .contact-btn:hover {
@@ -533,12 +522,24 @@ body[dir="rtl"] .logo-slide {
     padding: 40px 0;
     text-align: center; /* Center the content */
     color: #fff;
+    
 }
 
 #contact-info, #follow-us {
+    color: #c59c6e; /* Use the same color as subtitles */
+    font-size: 1.2rem; /* Increase font size */
+    font-weight: bold; /* Make the text bold */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s ease;
+    
     margin-bottom: 20px;
     font-size: 16px;
 }
+
+.contact-info:hover {
+    text-decoration: underline; /* Darken the color on hover */
+}
+
 
 /* Footer Styling */
 footer {

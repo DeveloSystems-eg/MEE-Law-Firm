@@ -187,8 +187,19 @@ h2 {
 }
 
 body[dir="rtl"] .lawyer-card {
-    margin-left: 0; /* Remove left margin */
-    margin-right: 300px; /* Apply right margin */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Full width for small screens */
+    max-width: 400px; /* Restrict max width on larger screens */
+    text-align: center; /* Center text inside the card */
+    margin: 0 auto; /* Apply right margin */
 }
 
 /* Lawyer Photo */

@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Modal Content Translation
             document.querySelector('.modal-content h3').innerHTML = 'تواصل مع محمد عز الرجال';
-            document.querySelector('.modal-content p').innerHTML = 'البريد الإلكتروني: <a href="mailto:mezzalregal@lawfirm.com">mezzalregal@lawfirm.com</a><br> الهاتف: <a href="tel:+20123456789">+ 20 123 456 789</a>';
+            document.querySelector('.modal-content p').innerHTML = 'البريد الإلكتروني: <a href="mailto:mohamedee797@gmail.com">mohamedee797@gmail.com</a><br> الهاتف: <a href="tel:+20123456789">+ 20 123 456 789</a>';
 
             // Services Section
             document.getElementById('services').querySelector('h2').innerHTML = 'الاستشارات القانونية';
@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('contact-title').innerHTML = 'اتصل بنا';
             document.getElementById('location-title').innerHTML = 'عنواننا';
             document.getElementById('contact-email').innerHTML =
-            modalEmail.innerHTML = 'البريد الإلكتروني: <a href="mailto:mezzalregal@lawfirm.com">mezzalregal@lawfirm.com</a>';
+            modalEmail.innerHTML = 'البريد الإلكتروني: <a href="mailto:mohamedee797@gmail.com">mohamedee797@gmail.com</a>';
             document.getElementById('contact-phone').innerHTML = 
             modalPhone.innerHTML = 'الهاتف: <a href="tel:+201063606886"> ‎ +20 1063606886</a>';
 
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 '&copy; 2024 مكتب محمد عز الرجال للمحاماة. جميع الحقوق محفوظة.';
 
                 modalTitle.innerHTML = 'تواصل مع محمد عز الرجال';
-                modalEmail.innerHTML = 'البريد الإلكتروني: <a href="mailto:mezzalregal@lawfirm.com">mezzalregal@lawfirm.com</a>';
+                modalEmail.innerHTML = 'البريد الإلكتروني: <a href="mailto:mohamedee797@gmail.com">mohamedee797@gmail.com</a>';
                 modalPhone.innerHTML = 'الهاتف: <a href="tel:+201063606886"> ‎ +20 1063606886</a>';
     
         } else {
@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Modal Content Translation
             document.querySelector('.modal-content h3').innerHTML = 'Contact Mohamed EzzAlRegal';
-            document.querySelector('.modal-content p').innerHTML = 'Email: <a href="mailto:mezzalregal@lawfirm.com">mezzalregal@lawfirm.com</a><br> Phone: <a href="tel:+20123456789">+20 123 456 789</a>';
+            document.querySelector('.modal-content p').innerHTML = 'Email: <a href="mailto:mohamedee797@gmail.com">mohamedee797@gmail.com</a><br> Phone: <a href="tel:+20123456789">+20 123 456 789</a>';
 
             // Services Section
             document.getElementById('services').querySelector('h2').innerHTML = 'Services We Provide';
@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('contact-title').innerHTML = 'Contact Us';
             document.getElementById('location-title').innerHTML = 'Our Location';
             document.getElementById('contact-email').innerHTML = 
-            modalEmail.innerHTML = 'Email: <a href="mailto:mezzalregal@lawfirm.com">mezzalregal@lawfirm.com</a>';
+            modalEmail.innerHTML = 'Email: <a href="mailto:mohamedee797@gmail.com">mohamedee797@gmail.com</a>';
             document.getElementById('contact-phone').innerHTML = 
             modalPhone.innerHTML = 'Phone: <a href="tel:+201063606886">+20 1063606886</a>';
             document.getElementById('follow-us').innerHTML = 'Follow us: <a href="https://wa.me/message/C4DG267ASJ5HB1">WhatsApp</a> | <a href="https://www.facebook.com/mohamedezzelrega?mibextid=JRoKGi">Facebook</a> | <a href="https://t.me/+201063606886">Telegram</a>';
@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Footer Section
             document.querySelector('footer p').innerHTML = '&copy; 2024 MEE Law Firm. All rights reserved.';
             modalTitle.innerHTML = 'Contact Mohamed EzzElRegal';
-            modalEmail.innerHTML = 'Email: <a href="mailto:mezzalregal@lawfirm.com">mezzalregal@lawfirm.com</a>';
+            modalEmail.innerHTML = 'Email: <a href="mailto:mohamedee797@gmail.com">mohamedee797@gmail.com</a>';
             modalPhone.innerHTML = 'Phone: <a href="tel:+201063606886">+20 1063606886</a>';
 
         }

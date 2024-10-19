@@ -395,6 +395,8 @@ body[dir="rtl"] .logo-slide {
 .news-ticker {
     display: inline-block;
     white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
 }
 
 /* LTR Animation */

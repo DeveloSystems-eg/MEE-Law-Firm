@@ -525,7 +525,7 @@ body[dir="rtl"] .logo-slide {
     
 }
 
-#contact-info a, #follow-us a {
+#contact-email a,#contact-phone a, #follow-us a {
     color: #c59c6e; /* Use the same color as subtitles */
     font-size: 1.2rem; /* Increase font size */
     font-weight: bold; /* Make the text bold */

@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
             // Footer
             document.querySelector('footer p').innerHTML =
-                '&copy; 2024 مكتب محمد عز الرجال للمحاماة. جميع الحقوق محفوظة.';
+                ' مكتب محمد عز الرجال للمحاماة &copy; 2024 جميع الحقوق محفوظة';
 
                 modalTitle.innerHTML = 'تواصل مع محمد عز الرجال';
                 modalEmail.innerHTML = 'البريد الإلكتروني: <a href="mailto:mohamedee797@gmail.com">mohamedee797@gmail.com</a>';

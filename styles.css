@@ -71,7 +71,8 @@ body[dir="rtl"] .logo-placeholder {
     gap: 10px;
     position: absolute;
     top: 20px; /* Align near the top */
-    right: 30px; /* Positioned to the far right */
+    right: 30px;
+     /* Positioned to the far right */
 }
 
 body[dir="rtl"] .language-switch {
@@ -80,12 +81,20 @@ body[dir="rtl"] .language-switch {
 }
 
 .language-switch button {
+    display: flex;
     background-color: transparent;
     color: #fff;
     border: 2px solid #fff;
+    text-align: center;
     padding: 8px 15px;
     cursor: pointer;
     transition: all 0.3s ease;
+    justify-content: center;
+    align-items: center;
+    min-width: 80px;  /* Set a minimum width */
+    max-width: 100px;  /* Ensure buttons don’t expand beyond this */
+    height: 40px;  
+
 }
 
 .language-switch button:hover {
@@ -390,7 +399,7 @@ body[dir="rtl"] .logo-slide {
 
 /* LTR Animation */
 .news-ticker-ltr {
-    animation: tickerMoveLTR 20s linear infinite;
+    animation: tickerMoveLTR 50s linear infinite;
 }
 
 @keyframes tickerMoveLTR {
@@ -404,7 +413,7 @@ body[dir="rtl"] .logo-slide {
 
 /* RTL Animation */
 .news-ticker-rtl {
-    animation: tickerMoveRTL 20s linear infinite;
+    animation: tickerMoveRTL 50s linear infinite;
 }
 
 @keyframes tickerMoveRTL {
@@ -694,6 +703,29 @@ footer a:hover {
     .service {
         flex: 1 1 calc(50% - 1rem); /* Adjust for smaller screens */
         margin: 0.5rem;
+        text-align: center; /* Center-align text */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Align items to the center */
+        justify-content: center; /* Vertically center the content */
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .service img {
+        width: 80px; /* Adjust image size */
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    .service h2 {
+        font-size: 18px; /* Responsive font size */
+        margin: 5px 0;
+    }
+
+    .service p {
+        font-size: 14px; /* Responsive paragraph size */
+        margin: 0;
     }
     .logo-placeholder {
         position: relative; /* Ensure it is positioned relative to other content */
@@ -712,6 +744,7 @@ footer a:hover {
  .language-switch {
         justify-content: center; /* Center the buttons */
     }
+    
     
 
     nav ul li {
@@ -806,7 +839,7 @@ footer a:hover {
             direction: rtl;
             text-align: center;
             justify-content: left;
-            padding-left: 70px;  /* Keep text centered */
+            padding-left: 20vw;  /* Keep text centered */
          
             
             
@@ -816,7 +849,8 @@ footer a:hover {
             direction: rtl;
             text-align: center;
             justify-content: center;
-            margin-right: 90px;
+            margin-right: 20vw;
+
             display: flex;
               /* Keep text centered */
           
@@ -859,19 +893,7 @@ footer a:hover {
         .service-modal-content p {
             font-size: 18px; /* Larger paragraph text */
         }
-          .service {
-        max-width: 90%; /* Expand to 90% width on small screens */
-        padding: 20px; /* Adjust padding for smaller screens */
-    }
 
-    .service img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .service h2 {
-        font-size: 20px;
-    }
 }
 
 /* Media Queries for Responsiveness */

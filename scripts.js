@@ -133,8 +133,11 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('clients-title').innerHTML = 'عملاؤنا';
             document.getElementById('contact-title').innerHTML = 'اتصل بنا';
             document.getElementById('location-title').innerHTML = 'عنواننا';
-            document.getElementById('contact-info').innerHTML =
-                'البريد الإلكتروني: info@mee-lawfirm.com | الهاتف:‎ +20 1063606886';
+            document.getElementById('contact-email').innerHTML =
+            modalEmail.innerHTML = 'البريد الإلكتروني: <a href="mailto:mezzalregal@lawfirm.com">mezzalregal@lawfirm.com</a>';
+            document.getElementById('contact-phone').innerHTML = 
+            modalPhone.innerHTML = 'الهاتف: <a href="tel:+201063606886"> ‎ +20 1063606886</a>';
+
             document.getElementById('follow-us').innerHTML =
                 'تابعنا على: <a href="https://wa.me/message/C4DG267ASJ5HB1">واتساب</a> | ' +
                 '<a href="https://www.facebook.com/mohamedezzelrega?mibextid=JRoKGi">فيسبوك</a> | ' +
@@ -231,7 +234,10 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('clients-title').innerHTML = 'Our Clients';
             document.getElementById('contact-title').innerHTML = 'Contact Us';
             document.getElementById('location-title').innerHTML = 'Our Location';
-            document.getElementById('contact-info').innerHTML = 'Email: info@mee-lawfirm.com | Phone: +20 1063606886';
+            document.getElementById('contact-email').innerHTML = 
+            modalEmail.innerHTML = 'Email: <a href="mailto:mezzalregal@lawfirm.com">mezzalregal@lawfirm.com</a>';
+            document.getElementById('contact-phone').innerHTML = 
+            modalPhone.innerHTML = 'Phone: <a href="tel:+201063606886">+20 1063606886</a>';
             document.getElementById('follow-us').innerHTML = 'Follow us: <a href="https://wa.me/message/C4DG267ASJ5HB1">WhatsApp</a> | <a href="https://www.facebook.com/mohamedezzelrega?mibextid=JRoKGi">Facebook</a> | <a href="https://t.me/+201063606886">Telegram</a>';
 
             // Footer Section

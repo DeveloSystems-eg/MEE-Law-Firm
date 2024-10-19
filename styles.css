@@ -399,7 +399,8 @@ body[dir="rtl"] .logo-slide {
 
 /* LTR Animation */
 .news-ticker-ltr {
-    animation: tickerMoveLTR 50s linear infinite;
+    animation: tickerMoveLTR 30s linear infinite;
+    animation-delay: 0s; /* Start immediately */
 }
 
 @keyframes tickerMoveLTR {
@@ -413,7 +414,8 @@ body[dir="rtl"] .logo-slide {
 
 /* RTL Animation */
 .news-ticker-rtl {
-    animation: tickerMoveRTL 50s linear infinite;
+    animation: tickerMoveRTL 30s linear infinite;
+    animation-delay: 0s; /* Start immediately */
 }
 
 @keyframes tickerMoveRTL {

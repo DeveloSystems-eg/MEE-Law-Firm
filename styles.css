@@ -396,13 +396,13 @@ body[dir="rtl"] .logo-slide {
     display: inline-block;
     white-space: nowrap;
     width: 100%;
-    overflow: hidden;
+    
 }
 
 /* LTR Animation */
 .news-ticker-ltr {
     animation: tickerMoveLTR 30s linear infinite;
-    animation-delay: 0s; /* Start immediately */
+    animation-delay: 0s; 
 }
 
 @keyframes tickerMoveLTR {

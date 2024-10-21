@@ -363,20 +363,6 @@ body[dir="rtl"] .logo-slide {
 }
 
 
-
-
-
-/* News Ticker */
-#news {
-    background-color: #222;
-    padding: 10px 0;
-    color: #c59c6e; /* Gold text color */
-    text-align: center;
-    overflow: hidden; /* Hide overflow for smooth scrolling */
-    margin-top: 20px;
-    z-index: 1;
-}
-
 /* Ministry of Justice and Council of State Logo */
 .Ministry, .HeadquartersCouncil {
     width: 50px; /* Adjust the size of the logos */
@@ -392,22 +378,47 @@ body[dir="rtl"] .logo-slide {
     justify-content: center; /* Center the logos */
 }
 
+
+
+
+/* News Ticker */
+#news {
+    background-color: #222;
+    padding: 10px 0;
+    color: #c59c6e; /* Gold text color */
+    text-align: center;
+    overflow: hidden; /* Hide overflow for smooth scrolling */
+    margin-top: 20px;
+    z-index: 1;
+}
+.news-ticker-wrapper {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+.news-ticker p {
+    margin: 0;
+    padding: 0 2rem; /* Add spacing between paragraphs */
+}
 .news-ticker {
     display: inline-block;
     white-space: nowrap;
-    width: 100%;
+    width: max-content;
     
 }
 
 /* LTR Animation */
 .news-ticker-ltr {
+    display: flex;
+    white-space: nowrap;
     animation: tickerMoveLTR 30s linear infinite;
-    animation-delay: 0s; 
+    animation-delay: 0s; /* Start immediately */
+   
 }
 
 @keyframes tickerMoveLTR {
     0% { 
-        transform: translateX(100%);
+        transform: translateX(10%);
     }
     100% { 
         transform: translateX(-100%);
@@ -416,13 +427,15 @@ body[dir="rtl"] .logo-slide {
 
 /* RTL Animation */
 .news-ticker-rtl {
+    display: flex;
+    white-space: nowrap;
     animation: tickerMoveRTL 30s linear infinite;
     animation-delay: 0s; /* Start immediately */
 }
 
 @keyframes tickerMoveRTL {
     0% { 
-        transform: translateX(-100%);
+        transform: translateX(-10%);
     }
     100% { 
         transform: translateX(100%);
